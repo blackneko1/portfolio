@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+:root{
+	--primaryFont:"Open Sans", sans-serif;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	text-decoration: none;
+}
+img{width: 100%;}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+    background-color: #000; /* Dark mode background */
+    color: #fff; /* Dark mode text color */
+}
+.light-mode {
+    background-color: #fff !important; /* Light mode background */
+    color: #000 !important;  /* Light mode text color */
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* style.css */
+body {
+    background-color: #000; /* Dark mode background */
+    color: #fff; /* Dark mode text color */
+}
+
+.light-mode body {
+    background-color: #fff !important; /* Light mode background */
+    color: #000 !important; /* Light mode text color */
+}
+
+/* Toggle Button Styles */
+.toggle-container {
+    position: absolute;
+  	width: 60px;
+  	height: 30px;
+  	right: 20px;
+  	top: 20px;
+}
+
+.toggle-checkbox {
+    display: none;
+}
+
+.toggle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ccc; /* Default color */
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.toggle::before {
+    content: '';
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background-color: #fff;
+    top: 2px; /* Adjust the top position to align with the background */
+    left: 2px; /* Adjust the left position to align with the background */
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.toggle-checkbox:checked + .toggle {
+    background-color: #4CAF50; /* Color when toggled */
+}
+
+.toggle-checkbox:checked + .toggle::before {
+    transform: translateX(28px); /* Adjust the translation to align with the background */
+    background-color: #fff; /* Color when toggled */
+}
+
+
+.wave {
+	position: fixed;
+	width: 400px;
+	height: 400px;
+	background-color: rgba(62, 35, 81, 0.25); /* Initial color */
+	border-radius: 50%;
+	animation: spin 5s linear infinite, morph 5s ease-in-out infinite, colorChange 5s linear infinite;
+	 
+}
+  
+  @keyframes spin {
+	from {
+	  transform: rotate(0deg);
+	}
+	to {
+	  transform: rotate(360deg);
+	}
+  }
+  
+  @keyframes morph {
+    0%, 100% {
+        border-radius: 50% 50% 50% 50%; /* Circle */
+    }
+    25% {
+        border-radius: 60% 40% 60% 40%; /* Vertical oval elongated */
+    }
+    50% {
+        border-radius: 50% 50% 50% 50%; /* Circle */
+    }
+    75% {
+        border-radius: 40% 60% 40% 60%; /* Horizontal oval elongated */
+    }
+}
+
+  
+.wave-con {
+	position: relative;
+}
+.wave-con .wave:nth-child(1) {
+	
+	left: -154px;
+  top: -38px;
+}
+.wave-con .wave:nth-child(2) {
+	left: -200px;
+	top: -38px;
+}
+.wave-con .wave:nth-child(3) {
+	
+	right: -154px;
+  top: -38px;
+}
+.wave-con .wave:nth-child(4) {
+	right: -200px;
+	top: -38px;
+}
+.wave-con .wave:nth-child(5) {
+	
+	left: -197px;
+	bottom: -235px;
+}
+.wave-con .wave:nth-child(6) {
+	left: -325px;
+	bottom: -38px;
+}
+.wave-con .wave:nth-child(7) {
+
+	right: -197px;
+	bottom: -235px;
+}
+.wave-con .wave:nth-child(8) {
+	right: -325px;
+	bottom: -38px;
+}								
+
+.wrapper{width: 100%; max-width: 1400px; margin: 0 auto;position: relative;}
+
+/*intro*/
+.info-text {
+	display: flex;
+	justify-content: left;
+	align-items: center;
+	min-height: 600px;
+}
+.info-text h2 {
+	text-align: center;
+	line-height: 100%;
+}
+.info-text h2 span {
+	display: block;
+	font-size: 40px;
+	line-height: 100%;
+	margin-top: 20px;
+}
