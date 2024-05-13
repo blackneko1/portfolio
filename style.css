@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
 */
 :root{
 	--primaryFont:"Open Sans", sans-serif;
+	--secondaryFont: "Poetsen One", sans-serif;
 }
 
 html, body, div, span, applet, object, iframe,
@@ -110,7 +112,7 @@ body {
 }
 
 .toggle-checkbox:checked + .toggle::before {
-    transform: translateX(28px); /* Adjust the translation to align with the background */
+    transform: translateX(30px); /* Adjust the translation to align with the background */
     background-color: #fff; /* Color when toggled */
 }
 
@@ -119,7 +121,7 @@ body {
 	position: fixed;
 	width: 400px;
 	height: 400px;
-	background-color: rgba(62, 35, 81, 0.25); /* Initial color */
+	background-color: rgba(215, 177, 242, 0.25); /* Initial color */
 	border-radius: 50%;
 	animation: spin 5s linear infinite, morph 5s ease-in-out infinite, colorChange 5s linear infinite;
 	 
@@ -193,27 +195,30 @@ body {
 .wrapper{width: 100%; max-width: 1400px; margin: 0 auto;position: relative;}
 
 /*intro*/
-.info-text {
+.intro-text {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	min-height: 600px;
 }
-.info-text h2 {
+.intro-text h2 {
 	text-align: center;
 	line-height: 100%;
+	font-family: var(--primaryFont);
 }
-.info-text h2 span {
+.intro-text h2 span {
 	display: block;
 	font-size: 30px;
 	line-height: 100%;
 	margin-top: 20px;
+	font-family: var(--secondaryFont);
 }
-.info-inner h3{
+.intro-inner h3{
 	font-size: 40px;
+	font-family: var(--primaryFont);
 }
 
-.info-inner {
+.intro-inner {
 	background: rgba(222, 152, 245, 0.2);
 	border-radius: 16px;
 	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -221,4 +226,23 @@ body {
 	-webkit-backdrop-filter: blur(5px);
 	border: 1px solid rgba(222, 152, 245, 0.3);
 	padding: 20px;
+}
+.info-text figure{
+	height: 200px;   
+	overflow: hidden;   
+	margin: 0 auto;   
+	width: max-content;
+}
+.info-text figure img{
+  	width: 400px;
+  	height: 400px;
+  	object-fit: contain;
+}
+.info-text p{
+	text-align: center; 
+	width: 100%;
+  	max-width: 740px;
+  	margin: 20px auto 0;
+  	font-size: 20px;
+	  font-family: var(--primaryFont);
 }
