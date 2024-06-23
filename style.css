@@ -216,6 +216,7 @@ body {
 .intro-inner h3{
 	font-size: 40px;
 	font-family: var(--primaryFont);
+	text-align: center;
 }
 
 .intro-inner {
@@ -230,6 +231,7 @@ body {
 .info-text.animate__animated{
 	animation-duration: 3000ms;
 }
+
 .info-text figure{
 	height: 200px;   
 	overflow: hidden;   
@@ -257,11 +259,12 @@ body {
 	margin: 50px 0;
 }
 .work-info-con{
-	padding: 30px;
+	padding: 30px 100px;
   	border: 1px solid #342d80de;
   	border-bottom-right-radius: 200px;
   	border-top-left-radius: 200px;
 	  box-shadow: rgba(92, 88, 235, 0.25) 0 30px 60px -12px inset,rgba(92, 88, 235, 0.25) 0 18px 36px -18px inset;
+	  background: #000;
 }
 .work-info-con h2{
 	font-family: var(--secondaryFont);
@@ -270,16 +273,15 @@ body {
 }
 
 .we-info {
-	display: grid;
-	justify-content: center;
-	grid-auto-flow: column;
+	display: flex;
 	gap: 20px;
+	justify-content: center;
 }
 .we-info ul {
 	margin-top: 30px;
 	width: 100%;
 	max-width: 500px;
-	box-shadow: rgba(10, 10, 255, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+	box-shadow: rgba(192, 80, 255, 0.25) 0 30px 60px -12px inset,rgba(0,0,0,.3) 0 18px 36px -18px inset;
   padding: 20px;
   border-radius: 20px;
 }
@@ -290,4 +292,77 @@ body {
 	font-family: var(--primaryFont);
 	font-size: 20px;
 	margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 1450px) {
+	.work-info-con {
+		margin: 0 20px;
+	}
+}
+@media only screen and (max-width: 1000px) {
+	.intro-inner{
+		margin: 0 20px;
+	}
+	.info-text {
+		margin: 0 20px;
+    	padding: 20px;
+    	border-radius: 20px;
+    	backdrop-filter: blur(5px);
+    	-webkit-backdrop-filter: blur(5px);
+    	background: rgba(92,88,235,.25);
+		border: 1px solid rgba(92,88,235,.25);
+	}
+	.work-info-con {
+		border-radius: 20px;
+		padding: 30px;
+	}
+	.we-info {
+		flex-wrap: wrap;
+	}
+	.we-info ul{
+		max-width: 100%;
+	}
+}
+@media only screen and (max-width: 600px) {
+
+	.wave-con .wave:nth-child(1) {
+	
+		left: -290px;
+	  top: -38px;
+	}
+	.wave-con .wave:nth-child(2) {
+		left: -310px;
+		top: -38px;
+	}
+	.wave-con .wave:nth-child(3) {
+		
+		right: -290px;
+	  top: -38px;
+	}
+	.wave-con .wave:nth-child(4) {
+		right: -310px;
+		top: -38px;
+	}
+	.wave-con .wave:nth-child(5) {
+		
+		left: -290px;
+		bottom: -235px;
+	}
+	.wave-con .wave:nth-child(6) {
+		left: -310px;
+		bottom: -38px;
+	}
+	.wave-con .wave:nth-child(7) {
+	
+		right: -290px;
+		bottom: -235px;
+	}
+	.wave-con .wave:nth-child(8) {
+		right: -310px;
+		bottom: -38px;
+	}								
+
+	.intro-inner h3 {
+		font-size: 28px;
+	}
 }
