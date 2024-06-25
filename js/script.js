@@ -1,15 +1,6 @@
-// script.js
 $(document).ready(function() {
-    $('#wave').click(function() {
-      $(this).css({
-        'animation-duration': '2s'
-      });
+    $('#burger').click(function() {
+        $('#nav-menu').toggleClass('show');
+        $(this).toggleClass('active');
     });
-        $('.toggle-checkbox').change(function() {
-            if ($(this).is(':checked')) {
-                $('body').addClass('light-mode');
-            } else {
-                $('body').removeClass('light-mode');
-            }
-        });
-    });
+});
